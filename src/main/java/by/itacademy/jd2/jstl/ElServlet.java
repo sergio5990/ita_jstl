@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static by.itacademy.jd2.jstl.WebUtils.forwardToJsp;
 
 @WebServlet(urlPatterns = "/el")
 public class ElServlet extends HttpServlet {
@@ -21,7 +20,7 @@ public class ElServlet extends HttpServlet {
 
         rq.setAttribute("user", new User("Valera"));
         rq.getSession().setAttribute("userSession", new User("Valera 2"));
-        forwardToJsp("el", rq, rs);
+        WebUtils.forwardToJsp("el", rq, rs);
     }
 
 }

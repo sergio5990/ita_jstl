@@ -2,7 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="с" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 <head>
@@ -18,22 +17,25 @@
 
 <h2>out</h2>
 <h3><c:out value="<c:out value='\${user}' default='defaultValue' escapeXml='true' />" escapeXml='true'/></h3>
-<h3><c:out value='${user}' default='defaultValue' escapeXml='true'/></h3>
+<h3><c:out value="${user}" default='defaultValue' escapeXml='true'/></h3>
 <br>
 
 <c:if test="${salary > 1000}">
-    I am rich (if)
+    <h4>I am rich (if)</h4>
 </c:if>
 <br>
 
-<с:choose>
-    <с:when test="${salary > 1000}">
+<c:choose>
+    <c:when test="${salary >= 1000}">
         I am rich (when)
-    </с:when>
-    <с:otherwise>
+    </c:when>
+    <c:when test="${1000 eq salary}">
+        I am rich (when 2)
+    </c:when>
+    <c:otherwise>
         I am poor (when)
-    </с:otherwise>
-</с:choose>
+    </c:otherwise>
+</c:choose>
 
 <br>
 

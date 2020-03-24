@@ -12,16 +12,19 @@
 <h2>from request</h2>
 <h3>\${requestScope.get("requestAttr")}</h3>
 <h3>${requestScope.get("requestAttr")}</h3>
+<h3>${requestAttr}</h3>
 <br>
 
 <h2>from sesson</h2>
 <h3>\${sessionScope.get("sessionAttr")}</h3>
 <h3>${sessionScope.get("sessionAttr")}</h3>
+<h3>${sessionAttr}</h3>
 <br>
 
 <h2>from global</h2>
 <h3>\${applicationScope.get("globalAttr")}</h3>
 <h3>${applicationScope.get("globalAttr")}</h3>
+<h3>${globalAttr}</h3>
 <br>
 
 <h2>bean from request </h2>
@@ -36,8 +39,8 @@
 <h3>\${user.name}</h3>
 <h3>${user.name}</h3>
 
-<h3>\${user.name == 'Valera'}</h3>
-<h3>${user.name == 'Valera'}</h3>
+<h3>\${user.name ne 'Valera'}</h3>
+<h3>${user.name ne 'Valera'}</h3>
 <br>
 
 <h2>bean</h2>

@@ -21,7 +21,7 @@ public class Jstl2Servlet extends HttpServlet {
         } else {
             rq.getSession().setAttribute("locale", locale);
         }
-        forwardToJsp("jstl2", rq, rs);
+        WebUtils.forwardToJsp("jstl2", rq, rs);
     }
 
 }
